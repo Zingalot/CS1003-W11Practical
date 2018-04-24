@@ -83,7 +83,7 @@ public class ScanWordsMapper extends Mapper<LongWritable, Text, Text, LongWritab
 							if (arrayEvent.toString().equals("KEY_NAME")) {
 								if (parser.getString().equals("expanded_url")) {
 									if (parser.next().toString().equals("VALUE_STRING")) {
-										String url = parser.getString();
+										String url = "\"" + parser.getString() + "\"" ;
 										output.write(new Text(url), new LongWritable(1));
 									}
 								}

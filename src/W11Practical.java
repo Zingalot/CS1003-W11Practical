@@ -10,7 +10,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.Job;
 
-public class WordCount {
+public class W11Practical {
 
 	public static void main(String[] args) throws IOException {
 
@@ -18,7 +18,7 @@ public class WordCount {
 		// the total number of occurrences of that word in all the input files.
 		
 		if(args.length < 2) {
-			System.out.println("Usage: java -cp lib/*:bin WordCount <input_path> <output_path>");
+			System.out.println("Usage: java -cp " + "\"" + "lib/*:bin" + "\"" + " W11Practical <input_path> <output_directory>");
 			System.exit(1);
 		}
 
@@ -27,7 +27,7 @@ public class WordCount {
 		
 		// Setup new Job and Configuration 
 		Configuration conf = new Configuration();
-		Job job = Job.getInstance(conf, "Word Count");
+		Job job = Job.getInstance(conf, "W11Practical");
 		
 		// Specify input and output paths
 		FileInputFormat.setInputPaths(job, new Path(input_path));
