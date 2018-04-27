@@ -1,0 +1,11 @@
+Overview
+
+For this project I was asked to create a program to record and count URLs found in sets of tweets. 
+The datasets were provided for me in the form of Json documents following a structure defined by Twitter.
+I was asked to perform this task using MapReduce, a model used for streamlining the sorting and summarising of data.
+The basic MapReduce code was provided to me, and I needed to create modified classes to suit my needs by extending the
+basic versions provided with Hadoop, a third party java library.
+
+
+Design & Implementation
+All of the work for this project is held within one class, as much of the necessary code was given to me within the W10 example classes.
